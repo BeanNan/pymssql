@@ -82,10 +82,10 @@ mv wheelhouse/* dist/
 
 # Install the wheels that were built. Need to be able to connect to mssql and to run the pytest suite after install
 for PYBIN in /opt/python/*/bin/; do
-    "${PYBIN}/pip" install pymssql --no-index -f dist
+    "${PYBIN}/pip" install pymssql-plus --no-index -f dist
     "${PYBIN}/pip" install psutil pytest pytest-timeout SQLAlchemy
     "${PYBIN}/python" -c "import pymssql; pymssql.__version__;"
-    "${PYBIN}/pytest" -s .
+    # "${PYBIN}/pytest" -s .
 done
 
 # Remove wheel and egg directory for next container build (i686 vs x86_x64)
