@@ -6,6 +6,9 @@ Feature:
     1. Fine-grained number types, such as int, long, float, double
     2. Cursor description has richer information, such as precision, scale
 
+Install:
+    pip install pymssql-plus
+
 A simple database interface for `Python`_ that builds on top of `FreeTDS`_ to
 provide a Python DB-API (`PEP-249`_) interface to `Microsoft SQL Server`_.
 
